@@ -26,7 +26,6 @@ core.register_chatcommand("cpicker",{
 end})
 core.register_on_formspec_input(function(formname, fields)
 	if formname ~= "color_picker" then return end
-	core.display_chat_message(dump(fields,""))
 	local r = core.explode_scrollbar_event(fields.red).value
 	local g = core.explode_scrollbar_event(fields.green).value
 	local b = core.explode_scrollbar_event(fields.blue).value
