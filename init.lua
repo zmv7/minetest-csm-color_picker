@@ -29,7 +29,7 @@ core.register_on_formspec_input(function(formname, fields)
 	local r = core.explode_scrollbar_event(fields.red).value
 	local g = core.explode_scrollbar_event(fields.green).value
 	local b = core.explode_scrollbar_event(fields.blue).value
-	if (r and g and b) then
+	if not fields.quit and (r and g and b) then
 		picker_fs(r,g,b)
 	end
 end)
